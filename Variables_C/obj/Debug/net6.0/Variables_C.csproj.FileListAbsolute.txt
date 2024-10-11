@@ -1,0 +1,15 @@
+C:\Users\Aprendiz\Desktop\Variables_C\bin\Debug\net6.0\Variables_C.exe
+C:\Users\Aprendiz\Desktop\Variables_C\bin\Debug\net6.0\Variables_C.deps.json
+C:\Users\Aprendiz\Desktop\Variables_C\bin\Debug\net6.0\Variables_C.runtimeconfig.json
+C:\Users\Aprendiz\Desktop\Variables_C\bin\Debug\net6.0\Variables_C.dll
+C:\Users\Aprendiz\Desktop\Variables_C\bin\Debug\net6.0\Variables_C.pdb
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.csproj.AssemblyReference.cache
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.AssemblyInfoInputs.cache
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.AssemblyInfo.cs
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.csproj.CoreCompileInputs.cache
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.dll
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\refint\Variables_C.dll
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.pdb
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\Variables_C.genruntimeconfig.cache
+C:\Users\Aprendiz\Desktop\Variables_C\obj\Debug\net6.0\ref\Variables_C.dll
