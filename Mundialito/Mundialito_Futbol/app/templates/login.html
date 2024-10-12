@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-image: url('https://image.ondacero.es/clipping/cmsimages02/2024/09/12/7EAB92F4-FE33-413F-91C3-2244ECF2F3B1/santiago-bernabeu-elegido-como-mejor-estadio-mundo_98.jpg?crop=1024,576,x0,y52&width=1900&height=1069&optimize=high&format=webply'); /* Reemplazar con una imagen relacionada al Mundial */
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-body {
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco más transparente */
+            border-radius: 20px;
+        }
+
+        h2 {
+            color: #006400; /* Verde césped */
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-success {
+            background-color: #006400; /* Verde césped */
+            border-color: #006400;
+        }
+
+        .btn-success:hover {
+            background-color: #004c00;
+            border-color: #004c00;
+        }
+
+        .text-center a {
+            color: #006400;
+        }
+
+        .text-center a:hover {
+            color: #004c00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-12 col-md-6">
+                <div class="card shadow-lg border-0 rounded-lg">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Inicio de Sesión</h2>
+                        <hr>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Usuario</label>
+                                <input type="text" name="username" class="form-control" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" name="password" class="form-control" required>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-success btn-lg">Iniciar sesión</button>
+                            </div>
+                        </form>
+                        <div class="mt-4 text-center">
+                            <a href="{% url 'home' %}" class="text-decoration-none">Ir al inicio</a> |
+                            <a href="{% url 'registro' %}" class="text-decoration-none">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

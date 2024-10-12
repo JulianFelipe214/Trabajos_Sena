@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Mundial 2026</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        .navbar {
+            background-color: #000000 /* Verde césped */
+        }
+        header {
+            background-image: url('https://st4.depositphotos.com/11634452/24646/i/450/depositphotos_246464596-stock-photo-green-grass-field-background-soccer.jpg'); /* Reemplazar con una imagen real */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            border-radius: 8px 8px 0 0;
+        }
+        footer {
+            background-color: #006400;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://img.lovepik.com/element/45016/5499.png_860.png" alt="Logo Mundial 2026" width="40" height="40"> <!-- Reemplazar con tu logo -->
+                Mundial 2026
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/equipos">Equipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jugadores">Jugadores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tecnicos">Técnicos</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'registro' %}">Registro</a> <!-- Nuevo enlace de registro -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="text-white text-center py-5">
+        <div class="container">
+            <h1>Bienvenido al Mundial 2026</h1>
+            <p class="lead">La plataforma informativa y de gestión del Mundial México/Estados Unidos/Canadá 2026</p>
+        </div>
+    </header>
+
+    <!-- Sección de contenido -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.ytimg.com/vi/DN7a-7fcnmQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCZn67ED0UmMmgo4EoKITmU96TQxQ" class="card-img-top" alt="Equipos">
+                        <div class="card-body">
+                            <h5 class="card-title">Equipos Participantes</h5>
+                            <p class="card-text">Explora los equipos que competirán en el Mundial 2026.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2022-03/Split%202%20fotos%20%282%29_0.jpg?itok=xP8bi483" class="card-img-top" alt="Jugadores">
+                        <div class="card-body">
+                            <h5 class="card-title">Jugadores Destacados</h5>
+                            <p class="card-text">Descubre a las estrellas que brillarán en el Mundial.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F1110%2Fr1089016_1289x725_16%2D9.jpg" class="card-img-top" alt="Técnicos">
+                        <div class="card-body">
+                            <h5 class="card-title">Directores Técnicos</h5>
+                            <p class="card-text">Conoce a los estrategas detrás de los equipos.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2026 Plataforma Mundial. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
